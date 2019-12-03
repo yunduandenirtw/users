@@ -3,11 +3,11 @@ package com.smc.user.model;
 public class UsersDTO {
 
     private Integer id;
-    private String userName;
+    private String username;
     private String password;
-    private String userType;
+    private String usertype;
     private String email;
-    private Integer mobileNumber;
+    private Integer mobile;
     
     public Integer getId() {
 		return id;
@@ -15,11 +15,11 @@ public class UsersDTO {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getPassword() {
 		return password;
@@ -27,11 +27,11 @@ public class UsersDTO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getUserType() {
-		return userType;
+	public String getUsertype() {
+		return usertype;
 	}
-	public void setUserType(String userType) {
-		this.userType = userType;
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
 	}
 	public String getEmail() {
 		return email;
@@ -39,11 +39,11 @@ public class UsersDTO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Integer getMobileNumber() {
-		return mobileNumber;
+	public Integer getMobile() {
+		return mobile;
 	}
-	public void setMobileNumber(Integer mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobile(Integer mobile) {
+		this.mobile = mobile;
 	}
 
 

@@ -24,10 +24,7 @@ public class UsersService {
     	
     	String email = usersDTO.getEmail();
     	String password = usersDTO.getPassword();
-//    	Users users = usersRepository.findByEmailAndPassword(usersDTO.getEmail(), usersDTO.getPassword());
-    	Users users = usersRepository.findByEmailAndPassword(email, password);
-//        return FullStackBeanUtils.cloneUsers(user);
-         
+    	Users users = usersRepository.findByEmailAndPassword(email, password);       
     	return CommonResult.build(200, "Login success!", users);
     }
 

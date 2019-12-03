@@ -9,26 +9,26 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
-public class Users extends AuditEntity {
+public class Users {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
+  private Integer userid;
   
-  @Column(name = "userName")
-  private String  userName;
+  @Column(name = "username")
+  private String  username;
   
   @Column(name = "password")
   private String  password;
   
-  @Column(name = "userType")
-  private String  userType;
+  @Column(name = "usertype")
+  private String  usertype;
   
   @Column(name = "email")
   private String  email;
   
-  @Column(name = "mobileNumber")
-  private Integer mobileNumber;
+  @Column(name = "mobile")
+  private Integer mobile;
 
   @Column(name = "confirmed")
   private Integer confirmed;
@@ -38,20 +38,20 @@ public class Users extends AuditEntity {
     // TODO Auto-generated constructor stub
   }
   
-  public Integer getId() {
-		return id;
+  public Integer getUserId() {
+		return userid;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setUserId(Integer userid) {
+		this.userid = userid;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -62,12 +62,12 @@ public class Users extends AuditEntity {
 		this.password = password;
 	}
 
-	public String getUserType() {
-		return userType;
+	public String getUsertype() {
+		return usertype;
 	}
 
-	public void setUserType(String userType) {
-		this.userType = userType;
+	public void setUsertype(String usertype) {
+		this.usertype = usertype;
 	}
 
 	public String getEmail() {
@@ -78,11 +78,11 @@ public class Users extends AuditEntity {
 		this.email = email;
 	}
 
-	public Integer getMobileNumber() {
-		return mobileNumber;
+	public Integer getMobile() {
+		return mobile;
 	}
 
-	public void setMobileNumber(Integer mobileNumber) {
-		this.mobileNumber = mobileNumber;
+	public void setMobile(Integer mobile) {
+		this.mobile = mobile;
 	}
 }
