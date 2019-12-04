@@ -38,13 +38,14 @@ public class Users {
     // TODO Auto-generated constructor stub
   }
   
-  public Integer getUserId() {
-		return userid;
-	}
+    public Integer getUserid() {
+	    return userid;
+    }
 
-	public void setUserId(Integer userid) {
-		this.userid = userid;
-	}
+    public void setUserid(Integer userid) {
+	    this.userid = userid;
+    }
+
 
 	public String getUsername() {
 		return username;
@@ -84,5 +85,12 @@ public class Users {
 
 	public void setMobile(Integer mobile) {
 		this.mobile = mobile;
+	}
+	public Integer getConfirmed() {
+    	return confirmed;
+	}
+
+	public void setConfirmed(Integer confirmed) {
+		this.confirmed = confirmed;
 	}
 }

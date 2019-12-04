@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.smc.user.utils.CommonResult;
+import com.smc.user.utils.FullStackBeanUtils;
 import com.smc.user.entity.Users;
 import com.smc.user.model.UsersDTO;
 import com.smc.user.service.UsersService;
@@ -34,23 +35,26 @@ class UserApplicationTests {
 		}
 	}
 	
-//	@Test
-//	public void updatePassword() {
-//		try {
-//			
-//			CommonResult res = usersService.findUsers(1);
-//			UsersDTO usersDTO = new UsersDTO();
-//			Integer id = usersDTO.getId();
-//			if (id == 1) {
-//				usersDTO.setPassword("111999");}
-//			Users users = new Users();
-//		    users = (Users) res.getData();
-//			System.out.println("Your new password is " + users.getPassword());
-//			
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("***********update password failed");
-//		}
-//			
-//	}
+	@Test
+	public void updatePassword() {
+		try {
+			UsersDTO usersDTO = new UsersDTO();
+			Users users = new Users();
+			users.setUserid(1);
+			Integer userid = users.getUserid();
+			CommonResult res = usersService.findUsers(userid);
+			if (res.getData()!= null) {
+			usersDTO.setId(1);
+			usersDTO.setPassword("123999");}
+			Integer id = usersDTO.getId();
+			String password = usersDTO.getPassword();
+			res = usersService.changePassword(id, password);
+			System.out.println("Your password has been updated successfully!");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("***********update password failed");
+		}
+			
+	}
 }

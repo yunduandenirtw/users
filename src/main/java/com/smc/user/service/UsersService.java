@@ -34,12 +34,14 @@ public class UsersService {
      * @param id
      * @return
      */
-//    public CommonResult findUsers(int id) {
-//        Users users = usersRepository.findUsersById(id);
-//        usersRepository.updatePasswordById(id);
-//        UsersDTO usersDTO = new UsersDTO();
-//        usersDTO = FullStackBeanUtils.cloneUsers(users);
-//        return CommonResult.build(200, "Login success!", usersDTO);
-//    };
+    public CommonResult findUsers(int userid) {
+        Users users = usersRepository.findUsersById(userid);
+        return CommonResult.build(200, "User exist.", users);
+    };
+    
+    public CommonResult changePassword(int userid, String password) {
+        usersRepository.updatePasswordById(userid, password);
+        return CommonResult.build(200, "Password update success!");
+    };
 
 }

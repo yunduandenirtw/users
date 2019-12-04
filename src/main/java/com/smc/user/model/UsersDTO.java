@@ -8,8 +8,10 @@ public class UsersDTO {
     private String usertype;
     private String email;
     private Integer mobile;
+    private String confirmed;
     
-    public Integer getId() {
+
+	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
@@ -45,6 +47,11 @@ public class UsersDTO {
 	public void setMobile(Integer mobile) {
 		this.mobile = mobile;
 	}
-
+    public String getConfirmed() {
+		return confirmed;
+	}
+	public void setConfirmed(String confirmed) {
+		this.confirmed = confirmed;
+	}
 
 }
