@@ -8,6 +8,13 @@ import com.smc.user.model.UsersDTO;
 import com.smc.user.repository.UsersRepository;
 import com.smc.user.utils.FullStackBeanUtils;
 
+/**
+ * @ClassName UsersService
+ * @Description TODO
+ * @Author WangRuiTing
+ * @Date 12/1/2019 9:20 AM
+ * @Version 1.0
+ **/
 @Service
 public class UsersService {
 
@@ -24,8 +31,9 @@ public class UsersService {
     	
     	String email = usersDTO.getEmail();
     	String password = usersDTO.getPassword();
-    	Users users = usersRepository.findByEmailAndPassword(email, password);       
+    	Users users = usersRepository.findByEmailAndPassword(email, password);
     	return CommonResult.build(200, "Login success!", users);
+    	
     }
 
 
